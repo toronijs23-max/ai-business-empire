@@ -26,21 +26,61 @@ def home():
                 response = client.responses.create(
                     model="gpt-5.6",
                     input=f"""
-Tu esi biznesa ideju analīzes aģents.
+Tu esi AI BUSINESS EMPIRE galvenais CEO agents.
 
-Analizē šo biznesa ideju:
+Biznesa ideja:
 {ideja}
 
-Izvērtē:
-1. Tirgus potenciālu
-2. Mērķa klientus
-3. Iespējas pelnīt
-4. Galvenos riskus
-5. Vērtējumu no 0 līdz 100
-6. Gala verdiktu: GO, UZLABOT vai NO-GO
+Izverte ideju no 4 skatpunktiem:
 
-Atbildi latviešu valodā, konkrēti un praktiski.
+1. TIRGUS AGENTS
+- klienti
+- pieprasijums
+- konkurence
+- izaugsmes potencials
+
+2. FINANSU AGENTS
+- ienakumu avoti
+- izmaksas
+- pelnas potencials
+- monetizacija
+
+3. RISKU AGENTS
+- galvenie riski
+- vajie punkti
+- ko obligati parbaudit
+
+4. KLIENTU AGENTS
+- kam produktu pardot
+- kapec vini maksatu
+- ka iegut pirmos klientus
+
+Pec tam dod CEO gala rezultatu:
+
+TIRGUS: X/100
+FINANSES: X/100
+RISKS: X/100
+KLIENTI: X/100
+KOPEJAIS VERTEJUMS: X/100
+
+VERDIKTS: GO / UZLABOT / NO-GO
+
+3 GALVENIE IEMESLI:
+1.
+2.
+3.
+
+3 NAKAMIE SOLI:
+1.
+2.
+3.
+
+Atbildi latviesu valoda. Esi kritisks un realistisks. Neizdoma faktus.
 """
+
+
+
+
                 )
 
                 rezultats = (
