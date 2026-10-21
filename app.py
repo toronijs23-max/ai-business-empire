@@ -88,7 +88,10 @@ Atbildi latviesu valoda. Esi kritisks un realistisks. Neizdoma faktus.
                     + escape(response.output_text)
                     + "</pre>"
                 )
-
+                with open("web_idejas.txt", "a", encoding="utf-8") as fails:
+                    fails.write("IDEJA: " + ideja + "\n")
+                    fails.write("AI ANALIZE:\n" + response.output_text + "\n")
+                    fails.write("====================\n")
             except Exception:
                 app.logger.exception("AI analīzes kļūda")
                 rezultats = (
