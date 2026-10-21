@@ -231,3 +231,22 @@ with open("idejas.txt", "r", encoding="utf-8") as fails:
     visas_idejas = fails.read()
 
 print(visas_idejas)
+print("\n=== IDEJU REITINGS ===")
+
+idejas = []
+bloki = visas_idejas.split("====================")
+
+for bloks in bloki:
+    if "Ideja:" in bloks and "Vertejums:" in bloks:
+        nosaukums = bloks.split("Ideja:")[1].split("\n")[0].strip()
+        vertejums = bloks.split("Vertejums:")[1].split("/5")[0].strip()
+
+        if vertejums.isdigit():
+            idejas.append((int(vertejums), nosaukums))
+
+idejas.sort(reverse=True)
+
+for vieta, (vertejums, nosaukums) in enumerate(idejas, start=1):
+    print(f"{vieta}. {nosaukums} - {vertejums}/5")
+
+
