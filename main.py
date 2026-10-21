@@ -224,3 +224,6 @@ print("\n=== TOP IDEJU SISTEMA ===")
 print("Ideja:", idea_title)
 print("Autors:", author)
 print("Vertejums:", rating, "/5")
+
+print("\n=== IDEJU TOPS ===")
+print("Nakamas versijas funkcija: lietotaju ideju tops un balsosana.")
