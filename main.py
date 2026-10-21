@@ -226,4 +226,8 @@ print("Autors:", author)
 print("Vertejums:", rating, "/5")
 
 print("\n=== IDEJU TOPS ===")
-print("Nakamas versijas funkcija: lietotaju ideju tops un balsosana.")
+
+with open("idejas.txt", "r", encoding="utf-8") as fails:
+    visas_idejas = fails.read()
+
+print(visas_idejas)
